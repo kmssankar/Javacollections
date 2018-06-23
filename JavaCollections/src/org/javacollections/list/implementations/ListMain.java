@@ -16,7 +16,14 @@ public class ListMain {
 		ArrayFunc.DisplayList(usrlist);
 		usrAlllist = ArrayFunc.AddAlltoList(usrlist);
 		System.out.println("Display all the List after all data");
+		
+		//Display List using For and Iterators
 		ArrayFunc.DisplayList(usrAlllist);
 		ArrayFunc.DisplayListItr(usrAlllist);
+		
+		//Remove all the objects in the List
+		List<User> UsrListRemoved = ArrayFunc.Removeall(usrAlllist);
+		//Display List using For and Iterators
+		 ArrayFunc.DisplayList(UsrListRemoved);
 	}
 }

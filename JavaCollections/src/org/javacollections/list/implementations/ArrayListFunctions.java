@@ -14,6 +14,7 @@ public class ArrayListFunctions {
 	
 	public void DisplayList(List<User> DisList)
 	{
+		System.out.println("Display using <for Type Elment: ElemenList>");
 		for(User Usr : DisList)
 		{
 			System.out.println("User Details : " + Usr.getId() +" Name : " + Usr.getName());
@@ -37,5 +38,11 @@ public class ArrayListFunctions {
 					User Usr = (User) Itr.next();
 					System.out.println(" Id : " + Usr.getId() + " Name : "+ Usr.getName());
 				}
+	}
+	
+	public List<User> Removeall(List<User> DelAllList)
+	{
+		DelAllList.removeAll(DelAllList);
+		return DelAllList;
 	}
 }
