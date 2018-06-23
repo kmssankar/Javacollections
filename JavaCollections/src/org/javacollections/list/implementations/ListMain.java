@@ -17,5 +17,6 @@ public class ListMain {
 		usrAlllist = ArrayFunc.AddAlltoList(usrlist);
 		System.out.println("Display all the List after all data");
 		ArrayFunc.DisplayList(usrAlllist);
+		ArrayFunc.DisplayListItr(usrAlllist);
 	}
 }
