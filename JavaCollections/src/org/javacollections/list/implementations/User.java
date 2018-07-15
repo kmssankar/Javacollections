@@ -1,6 +1,6 @@
 package org.javacollections.list.implementations;
-
-public class User {
+import java.util.*;
+public class User implements Comparable<User>{
     private int id;
 	private String name;
 	public int getId() {
@@ -19,6 +19,10 @@ public class User {
 		super();
 		this.id = id;
 		this.name = name;
+	}
+	public int compareTo(User Usr) {
+	
+		return this.id - Usr.id;
 	}   
     
 }
