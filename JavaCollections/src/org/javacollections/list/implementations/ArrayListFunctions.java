@@ -45,4 +45,10 @@ public class ArrayListFunctions {
 		DelAllList.removeAll(DelAllList);
 		return DelAllList;
 	}
+	
+	public void displayAtIdx(List<User> LSTINP , int Idx)
+	{
+		User ListInst = LSTINP.get(Idx);
+		System.out.println(ListInst.toString());
+	}
 }

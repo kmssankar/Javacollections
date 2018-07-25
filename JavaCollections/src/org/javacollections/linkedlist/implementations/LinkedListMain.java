@@ -7,10 +7,23 @@ public class LinkedListMain {
 	public static void main(String[] args) {
      LinkedList<Course> CourseLL = new LinkedList<Course>();
      LinkedListFun LSFunc = new LinkedListFun();
+     
      LSFunc.AddCourse(CourseLL, new Course(12,"ComputerScience"));
      LSFunc.AddCourse(CourseLL, new Course(13,"Electronics"));
      LSFunc.AddCourse(CourseLL, new Course(10,"Communication"));
+     
      LSFunc.DisplayList(CourseLL,"After Adding");
+     LSFunc.displayReverse(CourseLL, "Display in Reverse");
+     
+     LSFunc.AddCourseAtFirst(CourseLL, new Course(122,"Instrumentation"));
+     LSFunc.DisplayList(CourseLL,"After Adding At First ");
+     
+     LSFunc.AddCourseAtLast(CourseLL, new Course(124,"Mechanical Engg"));
+     LSFunc.DisplayList(CourseLL,"After Adding At Last");
+     
+     LSFunc.displayusingListItr(CourseLL, "\n Using List Iterator");
+     
+     LSFunc.showHash(CourseLL);
      //add After an Index
      LSFunc.AddAtIdx(CourseLL, new Course(14,"Electrical Engineering"), 0);
      LSFunc.DisplayList(CourseLL,"After adding @ index 0");

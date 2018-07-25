@@ -23,6 +23,11 @@ public class User implements Comparable<User>{
 	public int compareTo(User Usr) {
 	
 		return this.id - Usr.id;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + "]";
 	}   
     
+	
 }

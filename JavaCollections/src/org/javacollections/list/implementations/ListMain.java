@@ -21,7 +21,8 @@ public class ListMain {
 		Collections.sort(usrlist);
 		System.out.println("After Soting based on id using Comparable");
 		ArrayFunc.DisplayList(usrlist);
-		
+		System.out.println("Get Based on index @ 2!!");
+		ArrayFunc.displayAtIdx(usrlist, 2);
 		//sort using Comparator
 		UsrNameCompare UsrCmp = new UsrNameCompare();
 		Collections.sort(usrlist,UsrCmp);
