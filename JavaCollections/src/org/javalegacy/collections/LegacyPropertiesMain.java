@@ -19,5 +19,4 @@ public class LegacyPropertiesMain {
 			System.out.println(obj + " Feedback -> " + Myprop.getProperty((String)obj) );
 		}
 	}
-
 }
