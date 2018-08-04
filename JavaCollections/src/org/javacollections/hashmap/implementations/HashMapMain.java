@@ -11,7 +11,7 @@ import java.util.HashMap;
 public class HashMapMain {
 
 	public static void main(String[] args) {
-
+		System.out.println(" !! Collections -> Hash Map !!");
 		HashMap <Integer ,Shares> ShareMap = new HashMap<Integer,Shares>();
 		HashMapFunctions HSF =new HashMapFunctions();
 		System.out.println("Is Empty : "+ShareMap.isEmpty());
@@ -25,5 +25,17 @@ public class HashMapMain {
 		HSF.ContainKey(ShareMap, 12);
 		HSF.ContainValue(ShareMap, Thought);
 	}
-
 }
+
+/*OUTPUT
+!! Collections -> Hash Map !!
+Is Empty : true
+MSG : Iterating Via set Interface
+Key : 12 Value :  Shares [shareId=12, tickker=Dell, companyDesc=IT and HardWare]
+Key : 13 Value :  Shares [shareId=13, tickker=CTSH, companyDesc=IT and Outsourcing]
+MSG : Traversing as using SET interface
+32 Value : Shares [shareId=32, tickker=THWKS, companyDesc=Consulting and Business Intelligence]
+12 Value : Shares [shareId=12, tickker=Dell, companyDesc=IT and HardWare]
+13 Value : Shares [shareId=13, tickker=CTSH, companyDesc=IT and Outsourcing]
+Key Found 12
+Key Found Shares [shareId=32, tickker=THWKS, companyDesc=Consulting and Business Intelligence]*/

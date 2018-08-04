@@ -1,20 +1,19 @@
-package org.javacollections.hashmap.implementations;
-
-import java.util.HashMap;
+package org.javacollections.Linkedhashmap.implementations;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.Map.Entry;
 
-import java.util.Set;
+import org.javacollections.Linkedhashmap.implementations.Shares;
 
-public class HashMapFunctions {
+public class LinkedHashMapFunctions {
 
-	public void AddElement(HashMap<Integer, Shares> InputMap, Shares Sh) {
-		InputMap.put(Sh.shareId, Sh);
+	public void AddElement(LinkedHashMap<Integer, Shares> shareMap, Shares shares) {
+		shareMap.put(shares.getShareId(), shares);
 	}
 
-	public void showElements(HashMap<Integer, Shares> InputMap, String Msg) {
+	public void showElements(LinkedHashMap<Integer, Shares> InputMap, String Msg) {
 		Set<Entry<Integer, Shares>> ItrSet = InputMap.entrySet();
 		Iterator<Entry<Integer, Shares>> Itr = ItrSet.iterator();
 		System.out.println("MSG : " + Msg);
@@ -25,7 +24,7 @@ public class HashMapFunctions {
 
 	}
 
-	public void showElements(HashMap<Integer, Shares> InputMap)
+	public void showElements(LinkedHashMap<Integer, Shares> InputMap)
 	{
 		System.out.println("MSG : Traversing as using SET interface");
 		for (Map.Entry<Integer, Shares> MapEntries: InputMap.entrySet())
@@ -35,19 +34,20 @@ public class HashMapFunctions {
 		}
 	}
 	
-	public void ContainKey(HashMap<Integer, Shares> InputMap , Integer Key)
+	public void ContainKey(LinkedHashMap<Integer, Shares> InputMap , Integer Key)
 	{
 		String Msg = (InputMap.containsKey(Key))?"Key Found ":"Key Not Found ";
 		System.out.println(Msg +  Key);
 	}
 	
-	public void ContainValue(HashMap<Integer, Shares> InputMap , Shares SearchShare)
+	public void ContainValue(LinkedHashMap<Integer, Shares> InputMap , Shares SearchShare)
 	{
 		String Msg = (InputMap.containsValue(SearchShare))?"Key Found ":"Key Not Found ";
 		System.out.println(Msg +  SearchShare);
 	}
 	
-	public void RemoveValue(HashMap<Integer, Shares> InputMap , Shares RemoveShare)
+	//removes a Linked Hashmap element using the Key
+	public void RemoveValue(LinkedHashMap<Integer, Shares> InputMap , Shares RemoveShare)
 	{
 		String Msg = (InputMap.remove(RemoveShare.getShareId())!=null)?"Value Removed ":"Value Not Found ";
 		System.out.println(Msg +  RemoveShare);
