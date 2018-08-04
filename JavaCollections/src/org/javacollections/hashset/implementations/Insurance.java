@@ -1,4 +1,4 @@
-package org.javacollections.hashset;
+package org.javacollections.hashset.implementations;
 
 public class Insurance {
 
