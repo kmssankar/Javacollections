@@ -8,10 +8,10 @@ public class Linkedhashsetmain {
 		LinkedHashSet<Movie> LSHMovie = new LinkedHashSet<Movie>();
 		Linkedhashsetfunctions LSHF = new Linkedhashsetfunctions();
 		//Adding to the List
-		LSHF.addtolinkedHashset(LSHMovie, new Movie("Cassablanka",1978,"Drama"));
-		LSHF.addtolinkedHashset(LSHMovie, new Movie("Once upon a time in West",1956,"Drama"));
-		LSHF.addtolinkedHashset(LSHMovie, new Movie("Once upon a time in Americs",1982,"Drama"));	
-		Movie M1000BC = new Movie("1000BC",2006," Historic Drama");
+		LSHF.addtolinkedHashset(LSHMovie, new Movie(1,"Cassablanka",1978,"Drama"));
+		LSHF.addtolinkedHashset(LSHMovie, new Movie(2,"Once upon a time in West",1956,"Drama"));
+		LSHF.addtolinkedHashset(LSHMovie, new Movie(3,"Once upon a time in Americs",1982,"Drama"));
+		Movie M1000BC = new Movie(3,"1000BC",2006," Historic Drama");
 		LSHF.addtolinkedHashset(LSHMovie,M1000BC);
 		//Display the LinkedHashSet
 		LSHF.displaylinkedHashset(LSHMovie);
