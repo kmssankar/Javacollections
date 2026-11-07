@@ -52,18 +52,44 @@ public class WaitNotifyProdConsumer {
             }
         });
 
+
+       Thread producerThread2 = new Thread(() -> {
+           try {
+               for(int i = 0; i < 10; i++) {
+                   sharedBuffer.produce(i);
+                   Thread.sleep(500);
+               }
+           } catch (InterruptedException e) {
+               Thread.currentThread().interrupt();
+           }
+       });
+
         Thread consumerThread = new Thread(() -> {
            try {
                for(int i = 0; i < 10; i++) {
                    sharedBuffer.consume();
-                   Thread.sleep(1000);
+                   Thread.sleep(500);
                }
            }catch (InterruptedException e){
                Thread.currentThread().interrupt();
            }
         });
 
-        producerThread.start();
+       Thread consumerThread2 = new Thread(() -> {
+           try {
+               for(int i = 0; i < 10; i++) {
+                   sharedBuffer.consume();
+                   Thread.sleep(500);
+               }
+           }catch (InterruptedException e){
+               Thread.currentThread().interrupt();
+           }
+       });
+
         consumerThread.start();
+        consumerThread2.start();
+        producerThread.start();
+        producerThread2.start();
+
     }
 }
